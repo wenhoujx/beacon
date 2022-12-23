@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/wenhoujx/beacon"
   },
-  "icon": "img/beacon-icon.png",
+  "icon": "img/beacon-icon.jpeg",
   "engines": {
     "vscode": "^1.74.0"
   },
