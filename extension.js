@@ -42,7 +42,8 @@ function _clearBeacon() {
 }
 
 function activate(context) {
-	context.subscriptions.push(vscode.commands.registerCommand('beacon.where-cursor', () => beacon()));
+	beacon()
+	// context.subscriptions.push(vscode.commands.registerCommand('beacon.where-cursor', () => beacon()));
 }
 
 function deactivate() { }

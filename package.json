@@ -9,12 +9,12 @@
     "email": "wenhoujx@gmail.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/wenhoujx/swiper",
+  "homepage": "https://github.com/wenhoujx/beacon",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wenhoujx/swiper"
+    "url": "https://github.com/wenhoujx/beacon"
   },
-  "icon": "img/swiper-icon.jpeg",
+  "icon": "img/beacon-icon.png",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -22,7 +22,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:beacon.where-cursor"
+    "onStartupFinished"
   ],
   "main": "./extension.js",
   "contributes": {
