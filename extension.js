@@ -34,7 +34,7 @@ function _setBeacon(editor) {
 			new vscode.Position(lineNumber, 100),
 		)])
 	
-	setTimeout(() => _clearBeacon(), 350);
+	setTimeout(() => _clearBeacon(), 100);
 }
 
 function _clearBeacon() {
