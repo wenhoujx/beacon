@@ -1,6 +1,7 @@
 
 const vscode = require('vscode');
 
+const isDebug = false
 const styles = [
 	vscode.window.createTextEditorDecorationType(
 		{
@@ -12,28 +13,28 @@ const styles = [
 ]
 function beacon() {
 	vscode.window.onDidChangeActiveTextEditor(editor => {
-		console.log('onDidChangeActiveTextEditor')
+		isDebug && console.log('onDidChangeActiveTextEditor')
 		if (!editor) {
 			return
 		}
 		_setBeacon(editor)
 	})
 	vscode.window.onDidChangeTextEditorVisibleRanges(event => {
-		console.log('onDidChangeTextEditorVisibleRanges')
+		isDebug && console.log('onDidChangeTextEditorVisibleRanges')
 		_setBeacon(event.textEditor)
 	})
 }
 
 function _setBeacon(editor) {
 	const lineNumber = editor.selection.start.line
-	console.log(`fire beacon ${lineNumber}`)
+	isDebug && console.log(`fire beacon ${lineNumber}`)
 	editor.setDecorations(styles[0],
 		// mark the whole line 
 		[new vscode.Range(
 			new vscode.Position(lineNumber, 0),
 			new vscode.Position(lineNumber, 100),
 		)])
-	
+
 	setTimeout(() => _clearBeacon(), 100);
 }
 
